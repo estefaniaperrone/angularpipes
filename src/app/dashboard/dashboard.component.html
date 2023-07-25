@@ -1,0 +1,42 @@
+
+
+<!--sidebar-->
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  <!-- CNTENT WR-->
+    <div class="example-sidenav-content">
+    
+      
+      <!--toolbar-->
+        <mat-toolbar>
+          
+         <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+         
+          <mat-icon>menu</mat-icon>
+        
+         </button>
+        <span>Listado de Clientes</span>
+      
+      
+      </mat-toolbar>
+    
+     
+      
+      
+      
+      <main class="p_3">
+       <!--<app-home></app-home>--> 
+       <app-users></app-users>
+      </main>
+      
+    </div>
+  
+  </mat-drawer-container>
+
+

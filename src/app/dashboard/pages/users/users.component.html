@@ -1,0 +1,37 @@
+<form  [formGroup]= "userForm" class="grid">
+  <div class="col-6 field">
+  <mat-form-field> 
+  <mat-label>nombre</mat-label>
+ <input formControlName="name" matInput type="text" name="name"/>
+</mat-form-field>
+  </div>
+ 
+  <div class="col-6 field">
+<mat-form-field> 
+  <mat-label>apellido</mat-label>
+ <input formControlName="surname" matInput type="text" name="surname"/>
+</mat-form-field>
+</div>
+
+<div class="col-6 field">
+  <mat-form-field> 
+  <mat-label>telefono</mat-label>
+ <input [formControl]="phoneControl" matInput type="phone" name="phone"/>
+</mat-form-field>
+</div>
+
+<div class="col-6 field">
+ <mat-form-field>
+  <mat-label>direccion</mat-label>
+    <input [formControl]="direccionControl" matImput type="direccion" name="direccion"/>
+</mat-form-field>
+</div>
+
+<pre>{{userForm.value | json}}</pre>
+<div class="col-12 flex justify-content-end">
+<button (click)="onSubmit()"type="submit" mat-button> Guardar</button>
+</div>
+</form>
+
+<app-users-table> </app-users-table>
+
